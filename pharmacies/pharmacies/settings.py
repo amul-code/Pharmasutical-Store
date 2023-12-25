@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     'shop',
     'timetable',
     'transfer',
+    'allauth',
+    'allauth.account',
+
 ]
 
 MIDDLEWARE = [
@@ -56,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'allauth.account.middleware.AccountMiddleware',
 ]
 
 ROOT_URLCONF = 'pharmacies.urls'
@@ -136,8 +140,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'email'  # TODO Insert host's mail address
-EMAIL_HOST_PASSWORD = 'pass'  # TODO Insert host's mail password
+EMAIL_HOST_USER = 'domain.test.app@gmail.com'  # TODO Insert host's mail address
+EMAIL_HOST_PASSWORD = 'bymu mvfa nimf yupf'  # TODO Insert host's mail password
 EMAIL_POST = '587'
 
 REST_FRAMEWORK = {

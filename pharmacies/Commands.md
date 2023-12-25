@@ -12,8 +12,8 @@ $ workon my_django_environment
 $ rmvirtualenv  my_django_environment
 
 Requirements:
-$ pip freeze > requirements.txt
-$ pip install -r requirements.txt
+ pip freeze > requirements.txt
+  pip install -r requirements.txt
 
 Dump data:
 Cancellare il file db.sqlite3 per evitare conflitti; a terminale eseguire migrate e creare il proprio superuser admin e rieseguire migrate; successivamente importare il db.json con il comandi sottostanti ed avviare il server nuovamente.

@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+# from django.conf.urls import path
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
@@ -41,9 +41,9 @@ urlpatterns = [
                   path('', views.homepage, name='home'),
                   path('admin/', admin.site.urls),
                   path('api-auth/', include('rest_framework.urls')),
-                  url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-                  url(r'^redoc/$', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-                  path('authentication/', include('authentication.urls')),
+                  path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+                    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+                    path('authentication/', include('authentication.urls')),
                   path('shop/', include('shop.urls')),
                   path('timetable/', include('timetable.urls')),
                   path('transfer/', include('transfer.urls')),

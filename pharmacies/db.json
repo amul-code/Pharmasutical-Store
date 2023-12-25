@@ -123,8 +123,8 @@
     "model": "sites.site",
     "pk": 1,
     "fields": {
-      "domain": "example.com",
-      "name": "example.com"
+      "domain": "127.0.0.1:8000",
+      "name": "127.0.0.1:8000"
     }
   },
   {
